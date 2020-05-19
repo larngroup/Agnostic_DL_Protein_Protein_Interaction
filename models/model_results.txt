@@ -1,0 +1,129 @@
+modelName	Loss	Acc	Sens	Spec	
+2_GAP_Conv:[128, 64]-2x2_Pool:2_Learn:0.001	0.67	0.59	0.53	0.66	
+4_LOCAL_Conv:[32, 64]-2x2_Pool:2_FC:[128, 32]_Drop:0.1_Learn:0.001	0.66	0.61	0.63	0.58	
+5_LOCAL_Conv:[32, 64]-2x2_Pool:2_FC:[128, 32]_Drop:0.3_Learn:0.001	0.66	0.61	0.65	0.57	
+4_LOCAL_Conv:[128, 64]-2x2_Pool:2_FC:[256, 64]_Drop:0.1_Learn:0.001	0.66	0.60	0.66	0.55	
+5_LOCAL_Conv:[128, 64]-2x2_Pool:2_FC:[256, 64]_Drop:0.3_Learn:0.001	0.66	0.61	0.55	0.67	
+4_LOCAL_Conv:[96, 64, 128]-2x2_Pool:2_FC:[32, 256]_Drop:0.1_Learn:0.001	0.66	0.60	0.62	0.59	
+5_LOCAL_Conv:[96, 64, 128]-2x2_Pool:2_FC:[32, 256]_Drop:0.3_Learn:0.001	0.67	0.60	0.57	0.64	
+6_LOCAL_Conv:[96, 64, 128]-2x2_Pool:2_FC:[32, 256]_Drop:NO_Learn:0.001	0.66	0.61	0.66	0.55	
+7_LOCAL_Conv:[96, 64, 128]-2x2_Pool:3_FC:[32, 256]_Drop:0.1_Learn:0.001	0.66	0.61	0.65	0.56	
+8_LOCAL_Conv:[96, 64, 128]-2x2_Pool:3_FC:[32, 256]_Drop:0.3_Learn:0.001	0.66	0.60	0.57	0.63	
+9_LOCAL_Conv:[96, 64, 128]-2x2_Pool:3_FC:[32, 256]_Drop:NO_Learn:0.001	0.66	0.61	0.59	0.63	
+10_LOCAL_Conv:[96, 64, 128]-2x2_Pool:4_FC:[32, 256]_Drop:0.1_Learn:0.001	0.66	0.61	0.61	0.60	
+11_LOCAL_Conv:[96, 64, 128]-2x2_Pool:4_FC:[32, 256]_Drop:0.3_Learn:0.001	0.66	0.61	0.64	0.58	
+12_LOCAL_Conv:[96, 64, 128]-2x2_Pool:4_FC:[32, 256]_Drop:NO_Learn:0.001	0.66	0.61	0.59	0.62	
+13_LOCAL_Conv:[96, 64, 128]-2x2_Pool:2_FC:[32, 128]_Drop:0.1_Learn:0.001	0.66	0.60	0.69	0.52	
+14_LOCAL_Conv:[96, 64, 128]-2x2_Pool:2_FC:[32, 128]_Drop:0.3_Learn:0.001	0.66	0.60	0.55	0.65	
+15_LOCAL_Conv:[96, 64, 128]-2x2_Pool:2_FC:[32, 128]_Drop:NO_Learn:0.001	0.66	0.61	0.62	0.59	
+16_LOCAL_Conv:[96, 64, 128]-2x2_Pool:3_FC:[32, 128]_Drop:0.1_Learn:0.001	0.67	0.60	0.60	0.60	
+17_LOCAL_Conv:[96, 64, 128]-2x2_Pool:3_FC:[32, 128]_Drop:0.3_Learn:0.001	0.66	0.61	0.58	0.63	
+18_LOCAL_Conv:[96, 64, 128]-2x2_Pool:3_FC:[32, 128]_Drop:NO_Learn:0.001	0.66	0.61	0.66	0.55	
+20_LOCAL_Conv:[256, 224, 160, 96]-2x2_Pool:2_FC:[1024, 256]_Drop:0.1_Learn:0.001	0.66	0.61	0.66	0.56	
+21_GLOBAL_Conv:[96, 224, 128]-2x2_FC:[512, 1024]_Drop:0.1_Learn:0.001	0.67	0.61	0.69	0.53	
+22_GLOBAL_Conv:[96, 224, 128]-2x2_FC:[512, 1024]_Drop:0.3_Learn:0.001	0.67	0.60	0.64	nan	
+22_GAP_Conv:[160, 256, 96]-2x2_Pool:2_Learn:0.001	0.66	0.61	0.61	0.62	
+23_GAP_Conv:[160, 256, 96]-2x2_Pool:3_Learn:0.001	0.66	0.61	0.57	0.64	
+22_GAP_Conv:[96, 256, 160]-2x2_Pool:2_Learn:0.001	0.66	0.60	0.47	0.74	
+23_GAP_Conv:[96, 256, 160]-2x2_Pool:3_Learn:0.001	0.66	0.60	0.51	0.70	
+24_GAP_Conv:[128, 96, 160]-2x2_Pool:2_Learn:0.001	0.66	0.61	0.62	0.60	
+25_GAP_Conv:[128, 96, 160]-2x2_Pool:3_Learn:0.001	0.66	0.61	0.59	0.63	
+22_GAP_Conv:[128, 224, 160]-2x2_Pool:2_Learn:0.001	0.66	0.61	0.54	0.69	
+20_LOCAL_Conv:[256, 96, 192]-2x2_Pool:2_FC:[256, 1024]_Drop:0.1_Learn:0.001	0.66	0.62	0.59	0.64	
+21_LOCAL_Conv:[256, 96, 192]-2x2_Pool:2_FC:[256, 1024]_Drop:0.3_Learn:0.001	0.66	0.60	0.47	0.74	
+22_GAP_Conv:[160, 192, 224]-2x2_Pool:2_Learn:0.001	0.66	0.62	nan	0.68	
+23_GAP_Conv:[160, 192, 224]-2x2_Pool:3_Learn:0.001	0.66	0.61	0.65	0.57	
+22_GAP_Conv:[96, 192, 224]-2x2_Pool:2_Learn:0.001	0.76	0.52	0.36	0.68	
+23_GAP_Conv:[96, 192, 224]-2x2_Pool:3_Learn:0.001	0.74	0.52	0.23	0.81	
+20_LOCAL_Conv:[256, 128, 160]-2x2_Pool:2_FC:[1024, 512]_Drop:0.1_Learn:0.001	0.65	0.63	0.69	0.57	
+21_LOCAL_Conv:[256, 128, 160]-2x2_Pool:2_FC:[1024, 512]_Drop:0.3_Learn:0.001	0.67	0.63	0.74	0.51	
+20_LOCAL_Conv:[128, 160, 256]-2x2_Pool:2_FC:[128, 256]_Drop:0.1_Learn:0.001	0.66	0.64	0.74	0.53	
+21_LOCAL_Conv:[128, 160, 256]-2x2_Pool:2_FC:[128, 256]_Drop:NO_Learn:0.001	0.64	0.65	0.67	0.62	
+30_LOCAL_Conv:[256, 224, 160]-2x2_Pool:2_FC:[128, 1024]_Drop:0.1_Learn:0.001	0.69	0.62	0.60	0.65	
+31_LOCAL_Conv:[256, 224, 160]-2x2_Pool:2_FC:[128, 1024]_Drop:NO_Learn:0.001	0.68	0.63	0.71	nan	
+32_LOCAL_Conv:[256, 224, 160]-2x2_Pool:2_FC:[128, 1024]_Drop:0.1_Learn:0.001	0.65	0.63	0.71	0.55	
+33_LOCAL_Conv:[256, 224, 160]-2x2_Pool:2_FC:[128, 1024]_Drop:NO_Learn:0.001	0.69	0.50	nan	0.00	
+40_LOCAL_Conv:[128, 224, 160]-2x2_Pool:2_FC:[128, 512, 1024]_Drop:0.1_Learn:0.001	0.64	0.63	0.72	0.54	
+41_LOCAL_Conv:[128, 224, 160]-2x2_Pool:2_FC:[128, 512, 1024]_Drop:NO_Learn:0.001	0.87	0.62	nan	0.60	
+42_LOCAL_Conv:[128, 224, 160]-2x2_Pool:2_FC:[128, 1024, 256]_Drop:0.1_Learn:0.001	0.74	0.62	0.65	0.59	
+43_LOCAL_Conv:[128, 224, 160]-2x2_Pool:2_FC:[128, 1024, 256]_Drop:NO_Learn:0.001	0.65	0.63	0.73	0.53	
+50_GLOBAL_Conv:[224, 160, 256]-2x2_FC:[256, 512, 128]_Drop:0.1_Learn:0.001	0.67	0.61	0.66	0.56	
+51_GAP_Conv:[160, 192, 128]-2x2_Pool:2_Learn:0.001	0.64	0.63	0.65	0.61	
+52_GAP_Conv:[224, 192, 160]-2x2_Pool:2_Learn:0.001	0.65	0.63	0.71	0.55	
+53_GAP_Conv:[224, 160, 128]-2x2_Pool:2_Learn:0.001	0.64	0.63	0.69	0.56	
+54_LOCAL_Conv:[224, 192, 256]-2x2_Pool:2_FC:[128, 512, 256]_Drop:0.1_Learn:0.001	0.64	0.64	0.63	0.64	
+55_LOCAL_Conv:[224, 192, 256]-2x2_Pool:2_FC:[128, 512, 256]_Drop:NO_Learn:0.001	0.67	0.63	0.72	0.55	
+56_LOCAL_Conv:[224, 192, 256]-2x2_Pool:2_FC:[128, 256, 512]_Drop:0.1_Learn:0.001	0.65	0.63	0.71	0.54	
+57_LOCAL_Conv:[224, 192, 256]-2x2_Pool:2_FC:[128, 256, 512]_Drop:NO_Learn:0.001	0.64	0.63	0.69	0.57	
+60_LOCAL_Conv:[160, 128, 224]-2x2_Pool:2_FC:[128, 512, 1024]_Drop:0.1_Learn:0.001	0.64	0.63	0.75	0.51	
+61_LOCAL_Conv:[160, 128, 224]-2x2_Pool:2_FC:[128, 512, 1024]_Drop:NO_Learn:0.001	0.95	0.63	nan	0.61	
+62_LOCAL_Conv:[160, 128, 224]-2x2_Pool:2_FC:[256, 128, 512]_Drop:0.1_Learn:0.001	0.67	0.64	0.68	0.59	
+63_LOCAL_Conv:[160, 128, 224]-2x2_Pool:2_FC:[256, 128, 512]_Drop:NO_Learn:0.001	2.51	0.63	0.67	0.58	
+64_LOCAL_Conv:[160, 128, 224]-2x2_Pool:2_FC:[512, 128, 256]_Drop:0.1_Learn:0.001	1.78	0.64	0.66	nan	
+65_LOCAL_Conv:[160, 128, 224]-2x2_Pool:2_FC:[512, 128, 256]_Drop:NO_Learn:0.001	2.27	0.63	0.64	0.62	
+100_LOCAL_Conv:[224, 160, 192]-2x2_Pool:2_FC:[256, 128, 1024]_Drop:0.1_Learn:0.001	1.84	0.72	0.76	0.68	
+101_LOCAL_Conv:[192, 224, 160]-2x2_Pool:2_FC:[1024, 512, 256]_Drop:0.1_Learn:0.001	0.69	0.61	0.65	0.56	
+101_LOCAL_Conv:[128, 256, 224]-2x2_Pool:2_FC:[512, 128, 1024]_Drop:0.1_Learn:0.001	1.70	0.73	0.77	0.68	
+102_LOCAL_Conv:[128, 256, 224]-2x2_Pool:2_FC:[128, 512, 256]_Drop:0.1_Learn:0.001	1.69	0.70	0.75	0.66	
+103_LOCAL_Conv:[128, 256, 224]-2x2_Pool:2_FC:[1024, 256, 128]_Drop:0.1_Learn:0.001	0.69	0.50	0.00	1.00	
+200_LOCAL_Conv:[128, 160, 224]-2x2_Pool:2_FC:[512, 1024, 256]_Drop:0.1_Learn:0.001	1.21	0.74	0.75	0.72	
+201_LOCAL_Conv:[128, 160, 224]-2x2_Pool:2_FC:[128, 1024, 512]_Drop:0.1_Learn:0.001	0.95	0.71	0.78	0.63	
+300_LOCAL_Conv:[20, 64, 128, 256, 512]-[2]x[2]_Pool:[2]_FC:[64, 128, 256]_Drop:[0.1]_Learn:[0.001]_Opt:1	0.69	0.52	0.06	0.97	
+301_LOCAL_Conv:[20, 64, 128, 256, 512]-[2]x[2]_Pool:[2]_FC:[64, 128, 256]_Drop:[0.1]_Learn:[0.001]_Opt:2	0.69	0.54	0.54	0.54	
+302_LOCAL_Conv:[20, 64, 128, 256, 512]-[2]x[2]_Pool:[2]_FC:[64, 128, 256]_Drop:[0.1]_Learn:[0.001]_Opt:3	0.77	0.70	0.78	0.63	
+300_LOCAL_Conv:[20, 64, 128, 256, 512]-[2]x[2]_Pool:[2]_FC:[64, 128, 256]_Drop:[0.1]_Learn:[0.001]_Opt:3	0.93	0.67	0.64	0.71	
+300_LOCAL_Conv:[20, 64, 128, 256, 512]-[2]x[2]_Pool:[2]_FC:[256, 512, 1024]_Drop:[0.1]_Learn:[0.001]_Opt:1	0.69	0.50	1.00	0.00	
+1000_LOCAL_Conv:[64, 224, 128]-[2]x[2]_Pool:[2]_FC:[128, 64, 512]_Drop:[0.1]_Learn:[0.001]_Opt:0	0.70	0.60	0.64	0.55	
+1001_LOCAL_Conv:[64, 224, 128]-[2]x[2]_Pool:[2]_FC:[128, 64, 512]_Drop:[0.1]_Learn:[0.001]_Opt:0	1.15	0.60	0.68	0.52	
+1002_LOCAL_Conv:[64, 224, 128]-[2]x[2]_Pool:[2]_FC:[256, 64, 128]_Drop:[0.1]_Learn:[0.001]_Opt:0	0.77	0.59	0.68	0.50	
+1010_LOCAL_Conv:[224, 96, 192]-[2]x[2]_Pool:[2]_FC:[128, 256, 64]_Drop:[0.1]_Learn:[0.001]_Opt:0_DataUsed:2	0.14	0.98	0.98	0.99
+
+
+
+
+	
+Results from the whole dataset (dataUsed:1), the benchmark dataset A-B (dataUsed:2), benchmark dataset C-D(dataUsed:3) and benchmark dataset E(dataUsed:4)
+
+1_LOCAL_Conv:[160, 128, 256]-[2]x[2]_Pool:[2]_FC:[256, 128, 512]_Drop:[0.1]_Learn:[0.001]_Opt:1_DataUsed:2	Loss:0.10	Acc:0.99	Sens:0.98	Spec:0.99	trainAcc:1.00	trainSens:1.00	valAcc:0.99	valSens:0.99
+2_LOCAL_Conv:[160, 128, 256]-[2]x[2]_Pool:[2]_FC:[256, 128, 512]_Drop:[0.1]_Learn:[0.001]_Opt:3_DataUsed:2	Loss:0.13	Acc:0.98	Sens:0.98	Spec:0.98	trainAcc:0.99	trainSens:0.99	valAcc:0.98	valSens:0.99
+1_LOCAL_Conv:[96, 128, 256]-[2]x[2]_Pool:[2]_FC:[64, 256, 1024]_Drop:[0.1]_Learn:[0.001]_Opt:1_DataUsed:1	Loss:0.693	Acc:0.500	Sens:0.000	Spec:1.000	trainAcc:0.50	trainSens:0.94	valAcc:0.50	valSens:1.00
+2_LOCAL_Conv:[96, 128, 256]-[2]x[2]_Pool:[2]_FC:[64, 256, 1024]_Drop:[0.1]_Learn:[0.001]_Opt:3_DataUsed:1	Loss:0.724	Acc:0.607	Sens:0.652	Spec:0.562	trainAcc:0.88	trainSens:0.88	valAcc:0.58	valSens:0.91
+3_LOCAL_Conv:[96, 128, 256]-[2]x[2]_Pool:[2]_FC:[64, 256, 1024]_Drop:[0.1]_Learn:[0.001]_Opt:1_DataUsed:2	Loss:0.169	Acc:0.984	Sens:0.980	Spec:0.988	trainAcc:1.00	trainSens:1.00	valAcc:0.99	valSens:0.99
+4_LOCAL_Conv:[96, 128, 256]-[2]x[2]_Pool:[2]_FC:[64, 256, 1024]_Drop:[0.1]_Learn:[0.001]_Opt:3_DataUsed:2	Loss:0.145	Acc:0.964	Sens:0.933	Spec:0.992	trainAcc:0.99	trainSens:0.99	valAcc:0.99	valSens:1.00
+5_LOCAL_Conv:[96, 128, 256]-[2]x[2]_Pool:[2]_FC:[64, 256, 1024]_Drop:[0.1]_Learn:[0.001]_Opt:1_DataUsed:3	Loss:0.115	Acc:0.979	Sens:0.971	Spec:0.986	trainAcc:0.99	trainSens:1.00	valAcc:0.98	valSens:0.99
+6_LOCAL_Conv:[96, 128, 256]-[2]x[2]_Pool:[2]_FC:[64, 256, 1024]_Drop:[0.1]_Learn:[0.001]_Opt:3_DataUsed:3	Loss:0.287	Acc:0.960	Sens:0.932	Spec:0.988	trainAcc:1.00	trainSens:1.00	valAcc:0.98	valSens:0.98
+7_LOCAL_Conv:[96, 128, 256]-[2]x[2]_Pool:[2]_FC:[64, 256, 1024]_Drop:[0.1]_Learn:[0.001]_Opt:1_DataUsed:4	Loss:0.673	Acc:0.612	Sens:0.337	Spec:0.876	trainAcc:0.99	trainSens:0.99	valAcc:0.53	valSens:1.00
+8_LOCAL_Conv:[96, 128, 256]-[2]x[2]_Pool:[2]_FC:[64, 256, 1024]_Drop:[0.1]_Learn:[0.001]_Opt:3_DataUsed:4	Loss:1.902	Acc:0.634	Sens:0.369	Spec:0.891	trainAcc:1.00	trainSens:1.00	valAcc:0.56	valSens:1.00
+9_LOCAL_Conv:[128, 256, 64]-[2]x[2]_Pool:[2]_FC:[256, 128, 512]_ActivFun:relu_Drop:[0.1]_Learn:[0.001]_Opt:1_DataUsed:1	Loss:0.693	Acc:0.500	Sens:1.000	Spec:0.000	trainAcc:0.50	trainSens:0.79	valAcc:0.50	valSens:1.00
+9_LOCAL_Conv:[64, 256, 128]-[2]x[2]_Pool:[2]_FC:[256, 128, 512]_ActivFun:relu_Drop:[0.1]_Learn:[0.001]_Opt:1_DataUsed:1	Loss:1.758	Acc:0.596	Sens:0.616	Spec:0.575	trainAcc:0.98	trainSens:0.99	valAcc:0.58	valSens:1.00
+11_LOCAL_Conv:[128, 64, 160]-[2]x[2]_Pool:[2]_FC:[128, 512, 256]_ActivFun:relu_Drop:[0.1]_Learn:[0.001]_Opt:1_DataUsed:4	Loss:0.693	Acc:0.508	Sens:0.989	Spec:0.029	Auc:0.561	tPrecision:0.505	trainAcc:0.61	trainSens:0.98	valAcc:0.57	valSens:1.00
+1_LOCAL_Conv:[64, 256, 128]-2x2_Pool:2_FC:[256, 512, 1024]_ActivFun:relu_Drop:0.1_Learn:0.001_Opt:1_DataUsed:1_concatenate	Loss:0.677	Acc:0.576	Sens:0.662	Spec:0.489	Precision:0.564	trainAcc:0.66	trainSens:0.72	valSens:0.56
+2_LOCAL_Conv:[64, 256, 128]-2x2_Pool:2_FC:[256, 512, 1024]_ActivFun:swish_Drop:[0.1]_Learn:[0.001]_Opt:1_DataUsed:1_concatenate	Loss:0.826	Acc:0.595	Sens:0.610	Spec:0.581	Precision:0.592	trainAcc:0.89	trainSens:0.84	valSens:0.58
+2_FullyCnnPooling_Conv:[64, 256, 128]-2x2_Pool:2_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:1_concatenate	Loss:0.767	Acc:0.595	Sens:0.700	Spec:0.489	Precision:0.87	trainAcc:0.87	trainSens:0.58	valSens:1.00
+3_FullyCnn_FC:_Conv:[64, 256, 128]-2x2_Pool:2_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:1_concatenate	Loss:0.668	Acc:0.600	Sens:0.689	Spec:0.511	Precision:0.97	trainAcc:0.97	trainSens:0.58	valSens:0.66
+2_LOCAL_Conv:[64, 256, 128]-2x2_Pool:2_FC:[256, 512, 1024]_ActivFun:relu_Drop:0.1_Learn:0.001_Opt:1_DataUsed:3_concatenate	Loss:0.263	Acc:0.968	Sens:0.945	Spec:0.990	Precision:0.988	trainAcc:1.00	trainSens:1.00	valSens:0.97
+3_LOCAL_Conv:[64, 256, 128]-2x2_Pool:2_FC:[256, 512, 1024]_ActivFun:swish_Drop:[0.1]_Learn:[0.001]_Opt:1_DataUsed:3_concatenate	Loss:0.158	Acc:0.968	Sens:0.963	Spec:0.972	Precision:0.969	trainAcc:1.00	trainSens:1.00	valSens:0.97
+7_LOCAL_Conv:[64, 256, 128]-2x2_Pool:2_FC:[256, 512, 1024]_ActivFun:swish_Drop:[0.1]_Learn:[0.001]_Opt:1_DataUsed:2_concatenate	Loss:0.136	Acc:0.982	Sens:0.976	Spec:0.988	Precision:0.986	trainAcc:1.00	trainSens:1.00	valSens:0.98
+8_ConvLstm_Conv:[64, 256, 128]-2x2_Pool:2_LSTM:80_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:2_concatenate	Loss:0.082	Acc:0.983	Sens:0.979	Spec:0.987	Precision:0.99	trainAcc:0.99	trainSens:0.98	valSens:0.98
+9_FullyCnnPooling_Conv:[64, 256, 128]-2x2_Pool:2_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:2_concatenate	Loss:0.114	Acc:0.985	Sens:0.983	Spec:0.987	Precision:1.00	trainAcc:1.00	trainSens:0.99	valSens:0.99
+8_Autoencoder_FC:[400, 420]_ActivFun:relu_Learn:1_Opt:2_DataUsed:1	Loss:0.689	Acc:0.700	Sens:0.600	Spec:0.800	Precision:0.750	f1Score:0.500	trainAcc:0.500	valAcc:0.50
+9_Autoencoder_FC:[400, 420]_ActivFun:relu_Learn:1_Opt:2_DataUsed:1	Loss:0.695	Acc:0.500	Sens:0.000	Spec:1.000	Precision:nan	f1Score:0.500	trainAcc:0.500	valAcc:0.00
+8_Autoencoder_FC:[400, 420]_ActivFun:relu_Learn:1_Opt:2_DataUsed:1	Loss:0.690	Acc:0.532	Sens:0.390	Spec:0.673	Precision:0.546	f1Score:0.496	trainAcc:0.496	valAcc:0.53
+9_Autoencoder_FC:[400, 420]_ActivFun:relu_Learn:1_Opt:2_DataUsed:1	Loss:0.689	Acc:0.540	Sens:0.521	Spec:0.560	Precision:0.542	f1Score:0.496	trainAcc:0.496	valAcc:0.54
+9_FullyCnn_Conv:[64, 256, 128]-2x2_Pool:2_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:1_concatenate	Loss:0.821	Acc:0.596	Sens:0.662	Spec:0.53110_LOCAL_Conv:[64, 256, 128]-2x2_Pool:2_FC:[256, 512, 1024]_ActivFun:relu_Drop:0.1_Learn:0.001_Opt:1_DataUsed:6_concatenate	Loss:0.690	Acc:0.595	Sens:0.698	Spec:0.495	Precision:0.581	f1Score:0.496	trainAcc:0.496	valAcc:0.59
+12_LOCAL_Conv:[64, 256, 128]-2x2_Pool:2_FC:[256, 512, 1024]_ActivFun:swish_Drop:[0.1]_Learn:[0.001]_Opt:3_DataUsed:6_concatenate	Loss:2.948	Acc:0.621	Sens:0.657	Spec:0.584	Precision:0.611	f1Score:0.523	trainAcc:0.523	valAcc:0.60
+13_ConvLstm_Conv:[64, 256, 128]-2x2_Pool:2_LSTM:80_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:6_concatenate	Loss:0.694	Acc:0.526	Sens:0.833	Spec:0.219	Precision:0.516	f1Score:0.496	trainAcc:0.496	valAcc:0.52
+14_FullyCnnPooling_Conv:[64, 256, 128]-2x2_Pool:2_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:6_concatenate	Loss:2.918	Acc:0.597	Sens:0.623	Spec:0.572	Precision:0.592	f1Score:0.524	trainAcc:0.524	valAcc:0.60
+15_FullyCnn_Conv:[64, 256, 128]-2x2_Pool:2_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:6_concatenate	Loss:1.078	Acc:0.592	Sens:0.628	Spec:0.557	Precision:0.586	f1Score:0.497	trainAcc:0.497	valAcc:0.58
+16_Ensemble_FC:[256, 512, 1024]_ActivFun:relu_Drop:0.1_Learn:0.001_Opt:1_DataUsed:6	Loss:1.714	Acc:0.577	Sens:0.578	Spec:0.575	Precision:0.577	f1Score:0.500	trainAcc:0.500	valAcc:0.58
+17_Autoencoder_FC:[400, 420]_ActivFun:relu_Learn:1_Opt:2_DataUsed:6	Loss:0.691	Acc:0.528	Sens:0.589	Spec:0.466	Precision:0.524	f1Score:0.496	trainAcc:0.496	valAcc:0.53
+15_LOCAL_Conv:[64, 256, 128]-2x2_Pool:2_FC:[256, 512, 1024]_ActivFun:relu_Drop:0.1_Learn:0.001_Opt:1_DataUsed:7_concatenate	Loss:0.508	Acc:0.897	Sens:0.877	Spec:0.919	Precision:0.917	f1Score:0.529	trainAcc:0.529	valAcc:0.89
+16_LOCAL_Conv:[64, 256, 128]-2x2_Pool:2_FC:[256, 512, 1024]_ActivFun:swish_Drop:[0.1]_Learn:[0.001]_Opt:3_DataUsed:7_concatenate	Loss:0.282	Acc:0.903	Sens:0.890	Spec:0.917	Precision:0.916	f1Score:0.497	trainAcc:0.497	valAcc:0.90
+17_ConvLstm_Conv:[64, 256, 128]-2x2_Pool:2_LSTM:80_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:7_concatenate	Loss:0.335	Acc:0.889	Sens:0.869	Spec:0.910	Precision:0.908	f1Score:0.497	trainAcc:0.497	valAcc:0.90
+18_FullyCnnPooling_Conv:[64, 256, 128]-2x2_Pool:2_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:7_concatenate	Loss:0.320	Acc:0.897	Sens:0.901	Spec:0.891	Precision:0.895	f1Score:0.497	trainAcc:0.497	valAcc:0.90
+19_FullyCnn_Conv:[64, 256, 128]-2x2_Pool:2_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:7_concatenate	Loss:0.330	Acc:0.897	Sens:0.857	Spec:0.936	Precision:0.932	f1Score:0.497	trainAcc:0.497	valAcc:0.90
+20_Ensemble_FC:[256, 512, 1024]_ActivFun:relu_Drop:0.1_Learn:0.001_Opt:1_DataUsed:7	Loss:1.031	Acc:0.830	Sens:0.814	Spec:0.845	Precision:0.837	f1Score:0.528	trainAcc:0.528	valAcc:0.83
+20_LOCAL_Conv:[128, 256, 512]-2x2_Pool:2_FC:[256, 512, 1024]_ActivFun:relu_Drop:0.1_Learn:0.001_Opt:1_DataUsed:7_concatenate	Loss:0.603	Acc:0.892	Sens:0.874	Spec:0.909	Precision:0.907	f1Score:0.553	trainAcc:0.553	valAcc:0.90
+22_LOCAL_Conv:[128, 256, 512]-2x2_Pool:2_FC:[256, 512, 1024]_ActivFun:swish_Drop:[0.1]_Learn:[0.001]_Opt:3_DataUsed:7_concatenate	Loss:0.456	Acc:0.898	Sens:0.873	Spec:0.925	Precision:0.921	f1Score:0.524	trainAcc:0.524	valAcc:0.90
+23_ConvLstm_Conv:[128, 256, 512]-2x2_Pool:2_LSTM:80_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:7_concatenate	Loss:0.359	Acc:0.890	Sens:0.877	Spec:0.903	Precision:0.905	f1Score:0.497	trainAcc:0.497	valAcc:0.89
+24_FullyCnnPooling_Conv:[128, 256, 512]-2x2_Pool:2_ActivFun:relu_Learn:0.001_Opt:1_DataUsed:7_concatenate	Loss:0.302	Acc:0.896	Sens:0.869	Spec:0.924	Precision:0.922	f1Score:0.497	trainAcc:0.497	valAcc:0.90
