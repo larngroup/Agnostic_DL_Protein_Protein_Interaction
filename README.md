@@ -15,6 +15,14 @@ Our proposed model treats every protein as a separate entity, where rather than 
 
 ## **Requirements:**
 
+-Tensorflow;
+
+-Keras;
+
+-Numpy;
+
+-Scikit-learn
+
 ### **Future work:** 
 To improve the already obtained results, larger datasets can be incorporated in the creation of the DL models, allowing the model itself to learn from more samples and to better comprehend the distribution of those in the proteome. Also, with the progressive unveiling of more types of protein data, as their coverage of the whole proteome gradually increases, much more protein data can be combined in order to create more polished datasets.
 
