@@ -13,50 +13,8 @@ Proteins are indispensable to the living organisms, forming the backbone of almo
 ## **Model overview:**
 Our proposed model treats every protein as a separate entity, where rather than concatenating the proteins, each protein is separately fed to a stream of layers, so that each separate network is able to better assimilate the features of a single protein. We can clearly identify the separate networks derived from each protein. This first block of the whole model is responsible for extracting the high-level features of the complete protein sequence, considering that the stacking of convolutional layers hierarchically decompose the sequence, layer by layer, so that each consecutive layer learns to detect higher-level features, while at the same time preserving their spatial dependencies. At the end of the separate networks both proteins have been filtered and are represented by their relevant features. These two vectors are then merged into a vector, specific for each interaction, and posteriorly fed to the final block. In this final block different combinations of these features are tested and the model learns a function, that is capable to distinguish between interacting and non-interacting pairs, from the high-level features detected.
 
-## **Network architecture:** 
-Lately I have focused on only one architecture, the most conventional, which was the one that for previous tests had shown better results.
-
-![image](https://user-images.githubusercontent.com/58522514/78458093-c5004780-76a6-11ea-9d83-225c6f55310e.png)
-
-
-
-### **Results:** 
-Dividing for each of the datasets:
--**Dataset1**: Since there are several articles that choose to apply the same dataset, I chose to build a table where you can see the results of the different models proposed. For this dataset the best model has the following characteristics:
-   - number of filters in the convolution layers: [96,128,256];
-   - filter size: 2;
-   - size of the pooling filter: 2;
-   - number of neurons in the fully connected layers, [64,256,1024];
-   - drop rate of the dropout layers: 0.1;
-   - activation function: 'relu';
-   - model optimizers: Adam
-   - Learning Rate: 0.001.
-  
-Model  | Accuracy (%)| 
------------ | -------------
-https://pubs.acs.org/doi/abs/10.1021/pr100618t | 97.9
-https://bmcbioinformatics.biomedcentral.com/track/pdf/10.1186/s12859-017-1700-2 | 96.8
-https://www.sciencedirect.com/science/article/abs/pii/S0025556418307168 | 98.3
-My model  | 98.4
-
-
-- **Dataset2**: For this dataset the best model obtained an accuracy of 67% and has the following characteristics:
-   - number of convolution layer filters: [64,224,128];
-   - filter size: 2;
-   - size of the pooling filter: 2;
-   - number of neurons in the fully connected layers, [256,64,128];
-   - drop rate of the dropout layers: 0.1;
-   - activation function: 'relu';
-   - model optimizers: Adam
-   - Learning Rate: 0.001.
+## **Requirements:**
 
 ### **Future work:** 
-In a way, this comparison work, using datasets already published, was fundamental to validate the model and reach the conclusion that to obtain results in the range of excellent, the dataset is fundamental. In the future I had thought of exploring:
-- dataset of two benchmarks (https://pubs.acs.org/doi/abs/10.1021/acs.jcim.7b00028 and https://www.ncbi.nlm.nih.gov/pubmed/25657331) and evaluate their results to validate the model;
-- dataset created by me where only the multi-validated physical interactions of Biogrid are considered as positive, with the negative interactions being created by the same process, previously explained.
-- evaluate the efficiency and decision-making capacity of 3 different architectures:
-  - architecture based on the implementation of convolutional layers followed by an LSTM layer that function as an extractor of features of each protein, being subsequently concatenated into a feature vector, specific to each interaction and evaluated and classified as an interaction pair or not;
-  - architecture that encompasses different ways of representing each of the proteins, where for example each protein is represented by different descriptors, such as conjoint triads, auto-covariance, among others. The main focus being to evaluate whether the different information from different representations can complement each other and thereby create a model with better generalization capacity;
-  - architecture where only convolutional layers are used, where downsampling, typically done by pooling layers,
-is now achieved by using different stride values.
+To improve the already obtained results, larger datasets can be incorporated in the creation of the DL models, allowing the model itself to learn from more samples and to better comprehend the distribution of those in the proteome. Also, with the progressive unveiling of more types of protein data, as their coverage of the whole proteome gradually increases, much more protein data can be combined in order to create more polished datasets.
 
