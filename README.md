@@ -10,25 +10,15 @@ Proteins are indispensable to the living organisms, forming the backbone of almo
 
 -**Du et al. dataset**: A Saccharomyces cerevisiae PPIs dataset was gathered from the Database of Interacting Proteins. The negative interactions generation process was similar to the previous dataset
 
-![negative](https://user-images.githubusercontent.com/58522514/78459150-f7ae3e00-76ae-11ea-87e7-6fbd41c81a53.PNG)
+## **Model overview:**
+Our proposed model treats every protein as a separate entity, where rather than concatenating the proteins, each protein is separately fed to a stream of layers, so that each separate network is able to better assimilate the features of a single protein. We can clearly identify the separate networks derived from each protein. This first block of the whole model is responsible for extracting the high-level features of the complete protein sequence, considering that the stacking of convolutional layers hierarchically decompose the sequence, layer by layer, so that each consecutive layer learns to detect higher-level features, while at the same time preserving their spatial dependencies. At the end of the separate networks both proteins have been filtered and are represented by their relevant features. These two vectors are then merged into a vector, specific for each interaction, and posteriorly fed to the final block. In this final block different combinations of these features are tested and the model learns a function, that is capable to distinguish between interacting and non-interacting pairs, from the high-level features detected.
 
-### **Feature encoding:**
-As for the feature encoding, I kept the approach already used, eliminating interactions where at least one of the proteins had an excessively long sequence (there were cases of proteins with about 30,000 amino acids). Subsequently, I applied one-hot to each protein taking into account the existence of such 21 amino acids, thus obtaining matrices of 21xN. I opted for the representation of the 21 amino acids since I found that not grouping them in groups of 7, depending on their physical and chemical properties, allows to obtain better results.
-
-### **Network architecture:** 
+## **Network architecture:** 
 Lately I have focused on only one architecture, the most conventional, which was the one that for previous tests had shown better results.
 
 ![image](https://user-images.githubusercontent.com/58522514/78458093-c5004780-76a6-11ea-9d83-225c6f55310e.png)
 
-### **Hyper-tuning:**
-I focused my approach in adjusting some parameters:
-- number of convolution layer filters, choosing random combinations of 3 of the following values [64,96,128,160,192,224,256,512];
-- filter size, varying between 2 and 3;
-- size of the pooling filter, varying between 2 and 3;
-- number of neurons in the fully connected layers, choosing random combinations of 3 of the following values [64,128,256,512,1024];
-- drop rate of the dropout layers that were interspersed with the fully connected layers, their value being 0.1, 0.2 or 0.3;
-- activation function, choosing 'relu' or 'swish';
-- model optimizers, opting for Adam, SGD, or even RMSprop, as well as the learning rate of these same optimizers, choosing between 0.01 and 0.001.
+
 
 ### **Results:** 
 Dividing for each of the datasets:
